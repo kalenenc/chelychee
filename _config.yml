@@ -1,0 +1,11 @@
+name: "Music Website"
+description: "A Website for a Very Talented Artist"
+
+#url: "http://127.0.0.1:4000/"
+url: "http://kalenenc.github.io/chelychee/"
+
+#paginate: 10
+
+markdown: kramdown
+permalink: pretty
+# highlighter: pygments
