@@ -4,12 +4,87 @@ layout: default
 
 <main>
 	<div class="main-img-container">
-		<img src="{{site.url}}/photos/
+		<img class="tan-people" src="{{site.url}}/photos/
 		tan-people.png">
-		<div class="main-pic-cover"></div>
-		<div class="cover-text">
-			<h2>Bob and Jane</h2>
-			<p>Check out my portfolio</p>
+		<div class="main-pic-cover">
+			<p>Bob and Jane</p>
+			<p>Check out my <a href="#">portfolio</a></p>
 		</div>
 	</div>
 </main>
+
+<div class="bio-dots">
+	<div class="dot"></div>
+	<div class="dot"></div>
+	<div class="dot"></div>
+	<div class="chelsea-container">
+		<img class="chelsea" src="photos/chelsea.png" />
+		<div class="chelsea-text">
+			<p><a href="#">Chelsea</a></p>
+		</div>
+		<p>This is a description about me! I am Chelsea and I am an amazing artist! Love me, okay? Thanks.</p>
+	</div>
+
+	<div class="dot"></div>
+	<div class="dot"></div>
+	<div class="dot"></div>
+</div>
+
+
+
+<section class="portfolio-blurb clearfix">
+	<div class="port-collection">
+		<h2><a href="">Portfolio</a></h2>
+		<div class="port-blurb-item">
+			<div class="thumb-overlay">
+				<strong>Div</strong>	
+			</div>
+		</div>
+		<div class="port-blurb-item">
+			<div class="thumb-overlay">
+				<strong>Div</strong>
+			</div>
+		</div>
+		<div class="port-blurb-item">
+			<div class="thumb-overlay">
+				<strong>Div</strong>
+			</div>
+		</div>
+		<div class="port-blurb-item">
+			<div class="thumb-overlay">
+				<strong>Div</strong>
+			</div>
+		</div>	
+	</div>
+</section>
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		$(window).resize(function(){
+
+			if ($(window).width() > 650) {
+				$('.main-img-container').mouseenter(function(){
+				$('.main-pic-cover').slideDown(500).css("display", "flex");
+			});
+
+				$('.main-img-container').mouseleave(function(){
+				$('.main-pic-cover').slideUp(500);
+			});
+			}
+
+			else {
+				$('.main-img-container').off("mouseleave mouseenter");			
+			}
+		})
+	});
+
+	
+
+</script>
+
+

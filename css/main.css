@@ -4,6 +4,21 @@ body {
 	background-color:rgb(247, 202, 191);
 }
 
+a, a:hover {
+	text-decoration: none;
+	color:inherit;
+}
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+
+
 /* ---- Nav ---- */
 
 
@@ -122,11 +137,12 @@ footer {
 .main-img-container {
 	text-align:center;
 	position:relative;
-
+	width:90%;
+	margin:0 auto;
 }
 
-main img {
-	width:90%;
+.tan-people {
+	width:100%;
 	border-radius:10px;
 	border:10px solid #006665;
 
@@ -135,40 +151,196 @@ main img {
 .main-pic-cover {
 	position: absolute;
     background-color: #986C62;
-    width: 90%;
+    width: 100%;
     height: 40%;
-    top: 27%;
-    left: 5%;
     border-radius: 10px;
-    opacity:0.9;
-
+    top: 50%;
+	left: 50%;
+	border-radius: 10px;
+	transform:translate(-50%, -50%);
+	display:none;
+	justify-content: center;
+  	align-items: center;
+  	flex-direction: column;
+  	border:1px solid #65463f;
 }
 
-.cover-text {
-	position:relative;
-    bottom: 255px;
-    color:#FFF;
-    font-family: 'Amatic SC', cursive;
+.main-pic-cover:after {
+  content: "";
+  background: url(http://i.stack.imgur.com/JBoKL.png);
+  opacity: 0.2;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+}
+
+
+.main-pic-cover p {
+	color:white;
+	font-family: 'Amatic SC', cursive;
+	font-size:3em;
+	
+}
+
+.main-pic-cover p a {
+	text-decoration:underline;
+}
+
+.main-pic-cover p a:hover {
+	text-decoration:none;
+	opacity:0.5;
+	transition:1s;
 }
 
 @media screen and (max-width:650px) {
-	main img {
-		width:98%;
+	.main-img-container, .tan-people {
+		width:100%;
 	}
 
 	.main-pic-cover {
 		position: absolute;
+		display:flex;
 	    background-color: #986C62;
-	    width: 98%;
+	    width: 100%;
 	    height: 40%;
-	    top: 22%;
-	    left: 1%;
+	    top: 50%;
+	    left: 50%;
 	    border-radius: 10px;
+	    transform:translate(-50%, -50%);
 	}
+}
+
+/*---- PIC OF CHELS ----*/
+.bio-dots {
+	text-align: center;
+}
+
+.dot {
+	height:1.5em;
+	width:1.5em;
+	background-color: #986C62;
+	border-radius:50%;
+	margin:50px auto;
+
+}
+
+.chelsea-container {
+	position:relative;
+	width:40%;
+	margin:0 auto;
+}
+
+.chelsea-text {
+	padding:0.5em;
+	background-color:#e49885;
+	position:absolute;
+	bottom:33%;
+	width:100%;
+	font-family: 'Pacifico', cursive;
+	font-size: 2em
+
+}
+
+.chelsea-text p {
+	padding:0;
+	margin:0;
+}
+
+.chelsea {
+	width:100%;
+	border-radius:10px 100px;
+	background-color:white;
+	padding:1em;
+
+}
+
+.chelsea-container > p{
+	margin-top:50px;
+}
+
+@media screen and (max-width:650px)  {
+	.chelsea-container {
+		width:90%;
+	}
+}
+
+/*---- Portfolio Blurb ----*/
+
+.portfolio-blurb {
+	text-align: center;
+	background-color:#e49885;
+	padding-bottom:50px;
+}
+
+.port-collection {
+	margin:0 auto;
+	width:80%;
+}
+
+.portfolio-blurb h2 {
+	font-family: 'Amatic SC', cursive;
+	font-size:5em;
+	margin:0;
+	padding:50px 0;
+
+}
+
+.port-blurb-item {
+	background-image:url("../photos/gloves-guy.png");
+	background-position:center center;
+	background-repeat:no-repeat;
+	background-size:cover;
+	display:block;
+	position:relative;
+	float:left;
+	width:25%;
+	height:200px;
+	overflow:hidden;
+
+
+}
+
+.thumb-overlay {
+	position:absolute;
+	opacity:0.3;
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+}
+
+
+.thumb-overlay:hover {
+	position:absolute;
+	background-color:green;
+	opacity:0.3;
+	width:100%;
+	height:100%;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	transition:1s;
+}
+
+.thumb-overlay strong {
+	display:none;
+	padding:20px;
+	font-weight:300;
 }
 
 
 
+@media screen and (max-width:1040px) {
+	.port-blurb-item {
+		width:25%;
+	}
+}
 
 /*font-family: 'Pacifico', cursive;
 font-family: 'Oxygen', sans-serif;
