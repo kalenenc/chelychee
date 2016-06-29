@@ -26,10 +26,9 @@ a, a:hover {
 
 nav {
 	text-align:center;
-	margin-top:5em;
 	background-color:#e8aea0;
 	width:90%;
-	margin:5em auto 5em auto;
+	margin:2em auto 3em auto;
 	border-radius:10px;
 
 }
@@ -144,28 +143,26 @@ footer {
 .tan-people {
 	width:100%;
 	border-radius:10px;
-	border:10px solid #006665;
+	border:10px solid #c18e83
 
 }
 
 .main-pic-cover {
 	position: absolute;
-    background-color: #986C62;
+    background-color: rgba(118, 165, 164, 0.59);
     width: 100%;
     height: 40%;
-    border-radius: 10px;
     top: 50%;
 	left: 50%;
-	border-radius: 10px;
 	transform:translate(-50%, -50%);
 	display:none;
 	justify-content: center;
   	align-items: center;
   	flex-direction: column;
-  	border:1px solid #65463f;
+  	
 }
 
-.main-pic-cover:after {
+/*.main-pic-cover:after {
   content: "";
   background: url(http://i.stack.imgur.com/JBoKL.png);
   opacity: 0.2;
@@ -176,10 +173,10 @@ footer {
   position: absolute;
   z-index: -1;  
 }
-
+*/
 
 .main-pic-cover p {
-	color:white;
+	color:#006665;
 	font-family: 'Amatic SC', cursive;
 	font-size:3em;
 	
@@ -203,12 +200,10 @@ footer {
 	.main-pic-cover {
 		position: absolute;
 		display:flex;
-	    background-color: #986C62;
 	    width: 100%;
 	    height: 40%;
 	    top: 50%;
 	    left: 50%;
-	    border-radius: 10px;
 	    transform:translate(-50%, -50%);
 	}
 }
@@ -240,7 +235,8 @@ footer {
 	bottom:33%;
 	width:100%;
 	font-family: 'Pacifico', cursive;
-	font-size: 2em
+	font-size: 2em;
+
 
 }
 
@@ -254,9 +250,26 @@ footer {
 	border-radius:10px 100px;
 	background-color:white;
 	padding:1em;
+	}
+
+.chelsea:hover {
+	animation:chelseaBig 0.3s cubic-bezier(0.460, 0.125, 0.715, 1) forwards;
+			  /*chelseaName 0.3s ease-in, forwards;*/
 
 }
+/*
+.chelsea-text {
+	animation:chelseaBig 0.3s cubic-bezier(0.460, 0.125, 0.715, 1) forwards;
+}*/
 
+@keyframes chelseaBig {
+	to{transform:scale(1.1);}
+}
+
+/*@keyframes chelseaName {
+	to{opacity:1;}
+}
+*/
 .chelsea-container > p{
 	margin-top:50px;
 }

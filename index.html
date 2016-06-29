@@ -62,29 +62,3 @@ layout: default
 
 
 
-<script type="text/javascript">
-	$(document).ready(function(){
-
-		$(window).resize(function(){
-
-			if ($(window).width() > 650) {
-				$('.main-img-container').mouseenter(function(){
-				$('.main-pic-cover').slideDown(500).css("display", "flex");
-			});
-
-				$('.main-img-container').mouseleave(function(){
-				$('.main-pic-cover').slideUp(500);
-			});
-			}
-
-			else {
-				$('.main-img-container').off("mouseleave mouseenter");			
-			}
-		})
-	});
-
-	
-
-</script>
-
-
